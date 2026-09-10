@@ -14,7 +14,7 @@ print(data)
 "Plot"
 plt.plot(T, R, 'o-')
 plt.xlabel(r"Temperature ($^\circ$C)")
-plt.ylabel("Resistance ($\Omega$)")
+plt.ylabel(r"Resistance ($\Omega$)")
 plt.title("Temperature vs Resistance")
 
 plt.grid(True)
