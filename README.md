@@ -4,106 +4,142 @@
 
 This project analyzes the relationship between **temperature and electrical resistance** using Python.
 
-The program reads temperature and resistance data from a CSV file, displays the data, and creates a graph showing the relationship between temperature and resistance.
+The program reads temperature and resistance data from a CSV file, displays the experimental data, and creates a graph showing how electrical resistance changes with temperature.
 
 ## Objectives
 
-- Read experimental data from a CSV file
-- Extract temperature and resistance values
-- Display the experimental data
-- Plot temperature versus resistance
-- Visualize the temperature-dependent behavior of resistance
+* Read experimental data from a CSV file
+* Extract temperature and resistance values
+* Display the experimental data
+* Plot temperature versus resistance
+* Visualize the temperature-dependent behavior of electrical resistance
 
 ## Technologies Used
 
-- Python
-- Pandas
-- Matplotlib
+* **Python**
+* **Pandas**
+* **Matplotlib**
 
 ## Project Structure
 
 ```text
-
 temperature_dependent_characteristic/
 │
 ├── outputs/
-│   └── temperature_vs_resistance.png
+│   └── Figure_1.png
 │
 ├── main.py
 ├── README.md
 └── temperature_resistance.csv
+```
 
-Dataset
+## Dataset
 
-The dataset contains two main columns:
+The dataset is stored in `temperature_resistance.csv` and contains two main columns:
 
-Temperature_C
-Resistance_Ohm
+| Column           | Description                         |
+| ---------------- | ----------------------------------- |
+| `Temperature_C`  | Temperature in degrees Celsius (°C) |
+| `Resistance_Ohm` | Electrical resistance in ohms (Ω)   |
 
-Where:
-
-Temperature_C = Temperature in degrees Celsius
-Resistance_Ohm = Electrical resistance in ohms
-Analysis
+## Analysis
 
 The program performs the following steps:
 
-Loads the CSV file using Pandas.
-Extracts the temperature data.
-Extracts the resistance data.
-Displays the dataset.
-Plots temperature versus resistance.
-Code
+1. Loads the CSV file using Pandas.
+2. Extracts the temperature data.
+3. Extracts the resistance data.
+4. Displays the experimental dataset.
+5. Plots temperature versus resistance.
+6. Saves the resulting graph in the `outputs` folder.
 
-The data is loaded using Pandas:
+### Loading the Data
 
+The CSV file is loaded using Pandas:
+
+```python
 data = pd.read_csv("temperature_resistance.csv")
 
 T = data["Temperature_C"]
 R = data["Resistance_Ohm"]
+```
 
-The temperature and resistance values are then plotted:
+### Plotting the Data
 
+The temperature and resistance values are plotted using Matplotlib:
+
+```python
 plt.plot(T, R, 'o-')
+```
 
-The graph uses:
+The graph contains:
 
-X-axis: Temperature (°C)
-Y-axis: Resistance (Ω)
-Output
-Temperature vs Resistance
+* **X-axis:** Temperature (°C)
+* **Y-axis:** Resistance (Ω)
+
+## Output
+
+### Temperature vs Resistance
+
+The following graph shows the relationship between temperature and electrical resistance.
 
 ![Temperature vs Resistance](outputs/Figure_1.png)
 
-Result
+## Result
 
-The graph provides a visual representation of how the electrical resistance changes with temperature.
+The graph provides a visual representation of how the **electrical resistance changes with temperature**.
 
-How to Run
+This type of analysis is useful for studying the temperature-dependent electrical behavior of materials.
 
-Install the required libraries:
+## How to Run
 
+### 1. Install Python
+
+Make sure Python is installed on your computer.
+
+### 2. Install Required Libraries
+
+Open a terminal in the project directory and run:
+
+```bash
 pip install pandas matplotlib
+```
 
-Run the program:
+### 3. Run the Program
 
+Execute the Python script:
+
+```bash
 python main.py
-Conclusion
+```
 
-This project demonstrates a simple Python-based method for analyzing experimental temperature-dependent resistance data.
+The program will read the data from `temperature_resistance.csv` and generate the temperature-versus-resistance plot.
+
+## Conclusion
+
+This project demonstrates a simple Python-based approach to analyzing **temperature-dependent resistance data**.
 
 It provides practical experience with:
 
-Reading CSV files
-Data extraction using Pandas
-Data visualization
-Scientific plotting using Matplotlib
-Future Improvements
-Calculate the temperature coefficient of resistance
-Fit a trendline to the experimental data
-Calculate percentage change in resistance
-Compare experimental and theoretical results
-Analyze different materials
-Author
+* Reading CSV files
+* Data handling using Pandas
+* Extracting data from columns
+* Data visualization
+* Scientific plotting using Matplotlib
+* Analyzing experimental data
 
-MST. SANJIDA AKTER
+## Future Improvements
+
+The project can be further improved by adding:
+
+* Calculation of the **temperature coefficient of resistance**
+* Trendline or curve fitting
+* Percentage change in resistance
+* Comparison between experimental and theoretical results
+* Analysis of different materials
+* Calculation of statistical parameters
+* Automatic identification of important features in the data
+
+## Author
+
+**MST. SANJIDA AKTER**
