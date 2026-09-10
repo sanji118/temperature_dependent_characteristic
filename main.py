@@ -1,17 +1,17 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-"CSV file"
+#"CSV file"
 data=pd.read_csv("C:/programming_course_1/python-course/temperature_dependent_characteristic/temperature_resistance.csv")
 
-"Extract data"
+#Extract data
 T=data["Temperature_C"]
 R=data["Resistance_Ohm"]
 
-"Display"
+#"Display"
 print(data)
 
-"Plot"
+#Plot
 plt.plot(T, R, 'o-')
 plt.xlabel(r"Temperature ($^\circ$C)")
 plt.ylabel(r"Resistance ($\Omega$)")
