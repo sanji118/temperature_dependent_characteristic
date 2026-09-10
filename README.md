@@ -23,6 +23,7 @@ The program reads temperature and resistance data from a CSV file, displays the 
 ## Project Structure
 
 ```text
+
 temperature_dependent_characteristic/
 │
 ├── outputs/
@@ -72,7 +73,7 @@ Y-axis: Resistance (Ω)
 Output
 Temperature vs Resistance
 
-Output graph attachment will be here.
+![Temperature vs Resistance](outputs/Figure_1.png)
 
 Result
 
