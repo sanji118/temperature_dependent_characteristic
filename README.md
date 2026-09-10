@@ -83,7 +83,7 @@ The graph contains:
 
 The following graph shows the relationship between temperature and electrical resistance.
 
-![Temperature vs Resistance](outputs/Figure_1.png)
+![Temperature vs Resistance](ouputs/Figure_1.png)
 
 ## Result
 
